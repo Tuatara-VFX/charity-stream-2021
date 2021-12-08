@@ -370,6 +370,7 @@ MonoBehaviour:
   - id: 5
   - id: 6
   - id: 7
+  - id: 8
   injectionPoint: 1
   references:
     version: 1
@@ -383,7 +384,7 @@ MonoBehaviour:
         clearFlags: 0
         passFoldout: 1
         m_Version: 0
-        clearColor: {r: 1, g: 0.3820755, b: 0.8721876, a: 1}
+        clearColor: {r: 0.6792453, g: 0.24029905, b: 0.58763903, a: 1}
         clearFlag: -1
     00000001:
       type: {class: BlurCustomPass, ns: , asm: Assembly-CSharp}
@@ -412,6 +413,19 @@ MonoBehaviour:
         drawMesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
         drawTarget: {fileID: 388898855}
     00000003:
+      type: {class: DrawMeshDepthTestCustomPass, ns: , asm: Assembly-CSharp}
+      data:
+        m_Name: Draw Mesh + Depth
+        enabled: 0
+        targetColorBuffer: 0
+        targetDepthBuffer: 0
+        clearFlags: 0
+        passFoldout: 1
+        m_Version: 0
+        drawMaterial: {fileID: 2100000, guid: 11705fdcc3824f34fa1446d5deacd12d, type: 2}
+        drawMesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+        drawTarget: {fileID: 388898855}
+    00000004:
       type: {class: DrawMeshFullscreenCustomPass, ns: , asm: Assembly-CSharp}
       data:
         m_Name: Draw Mesh Fullscreen
@@ -423,7 +437,7 @@ MonoBehaviour:
         m_Version: 0
         drawMaterial: {fileID: 2100000, guid: 11705fdcc3824f34fa1446d5deacd12d, type: 2}
         drawMesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
-    00000004:
+    00000005:
       type: {class: DrawFullscreenCustomPass, ns: , asm: Assembly-CSharp}
       data:
         m_Name: Draw Fullscreen
@@ -434,7 +448,7 @@ MonoBehaviour:
         passFoldout: 1
         m_Version: 0
         fullscreenShader: {fileID: 4800000, guid: 257680cde83cf7e4f901ee53f17d1996, type: 3}
-    00000005:
+    00000006:
       type: {class: DrawMeshFullscreenCustomPass, ns: , asm: Assembly-CSharp}
       data:
         m_Name: Sample Camera Buffer
@@ -446,7 +460,7 @@ MonoBehaviour:
         m_Version: 0
         drawMaterial: {fileID: 2100000, guid: fcd1a33c11aa80b4aa93180573d38b4e, type: 2}
         drawMesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
-    00000006:
+    00000007:
       type: {class: DrawRenderersCustomPass, ns: UnityEngine.Rendering.HighDefinition, asm: Unity.RenderPipelines.HighDefinition.Runtime}
       data:
         m_Name: Fill Custom Buffer
@@ -470,7 +484,7 @@ MonoBehaviour:
         depthCompareFunction: 4
         depthWrite: 1
         shaderPass: 0
-    00000007:
+    00000008:
       type: {class: DrawMeshFullscreenCustomPass, ns: , asm: Assembly-CSharp}
       data:
         m_Name: Sample Custom Buffer
@@ -491,7 +505,7 @@ Transform:
   m_GameObject: {fileID: 388898852}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.2236, y: 4.2236, z: 4.2236}
+  m_LocalScale: {x: 3.2744, y: 3.2744, z: 3.2744}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6

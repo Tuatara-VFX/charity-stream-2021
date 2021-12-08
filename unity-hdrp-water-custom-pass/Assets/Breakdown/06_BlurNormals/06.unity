@@ -403,9 +403,9 @@ MonoBehaviour:
         m_Version: 0
         drawMaterial: {fileID: 2100000, guid: 2ca68dcf602ec8b4289b3ee2d06b27ff, type: 2}
         drawMesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
-        blurRadius: 9.4
-        sampleCount: 10
-        downsampleBuffer: 1
+        blurRadius: 11.6
+        sampleCount: 31
+        downsampleBuffer: 0
 --- !u!4 &388898855
 Transform:
   m_ObjectHideFlags: 0
