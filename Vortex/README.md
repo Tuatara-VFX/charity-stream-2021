@@ -1,3 +1,3 @@
-![img](image.jpg)
+![img](image.png)
 
 - Unreal 4.25
