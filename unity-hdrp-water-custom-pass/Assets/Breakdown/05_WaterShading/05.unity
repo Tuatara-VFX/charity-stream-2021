@@ -392,9 +392,9 @@ MonoBehaviour:
         depthWrite: 1
         shaderPass: 0
     00000001:
-      type: {class: BlurWaterNormals, ns: , asm: Assembly-CSharp}
+      type: {class: DrawMeshFullscreenCustomPass, ns: , asm: Assembly-CSharp}
       data:
-        m_Name: Render Water
+        m_Name: Custom Pass
         enabled: 1
         targetColorBuffer: 0
         targetDepthBuffer: 0
@@ -403,9 +403,6 @@ MonoBehaviour:
         m_Version: 0
         drawMaterial: {fileID: 2100000, guid: 2ca68dcf602ec8b4289b3ee2d06b27ff, type: 2}
         drawMesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
-        blurRadius: 0
-        sampleCount: 20
-        downsampleBuffer: 1
 --- !u!4 &388898855
 Transform:
   m_ObjectHideFlags: 0
