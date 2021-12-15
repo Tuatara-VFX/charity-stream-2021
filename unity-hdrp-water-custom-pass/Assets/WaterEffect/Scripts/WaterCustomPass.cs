@@ -6,6 +6,8 @@ using UnityEngine.Rendering.HighDefinition;
 class WaterCustomPass : CustomPass
 {
     [Range(0, 64)] public float blurRadius = 4;
+    [Range(0, 64)] public int sampleCount = 4;
+    public bool downsampleBuffer;
     public Material transparentFullscreenShader = null;
     public Mesh quad = null;
 
@@ -14,18 +16,18 @@ class WaterCustomPass : CustomPass
     protected override void Setup(ScriptableRenderContext renderContext, CommandBuffer cmd)
     {
         blurBuffer = RTHandles.Alloc(
-            Vector2.one * 0.5f, TextureXR.slices, dimension: TextureXR.dimension,
+            Vector2.one, TextureXR.slices, dimension: TextureXR.dimension,
             colorFormat: GraphicsFormat.R16G16B16A16_SNorm,
             useDynamicScale: true, name: "BlurBuffer"
-        );
+        );  
     }
 
     protected override void Execute(CustomPassContext ctx)
     {
         // Blur the custom buffer:
         var resRadius = blurRadius * ctx.cameraColorBuffer.rtHandleProperties.rtHandleScale.x;
-        CustomPassUtils.GaussianBlur(ctx, ctx.customColorBuffer.Value, ctx.customColorBuffer.Value, blurBuffer, 25,
-            resRadius);
+        CustomPassUtils.GaussianBlur(ctx, ctx.customColorBuffer.Value, ctx.customColorBuffer.Value, blurBuffer, sampleCount,
+            resRadius, downSample:downsampleBuffer);
         
         // Choose water buffer location.
         var distanceToCamera = Mathf.Lerp(ctx.hdCamera.camera.nearClipPlane, ctx.hdCamera.camera.farClipPlane, 0.0001f);

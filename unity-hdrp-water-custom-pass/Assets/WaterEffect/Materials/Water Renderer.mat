@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Water Renderer
   m_Shader: {fileID: -6465566751694194690, guid: da49df4a65fd96948828189c575116f5, type: 3}
-  m_ShaderKeywords: _ALPHATEST_ON _DEPTHOFFSET_ON _DISABLE_SSR_TRANSPARENT _ENABLE_FOG_ON_TRANSPARENT
+  m_ShaderKeywords: _ALPHATEST_ON _DEPTHOFFSET_ON _DISABLE_DECALS _DISABLE_SSR_TRANSPARENT
     _REFRACTION_SPHERE _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
@@ -49,7 +49,7 @@ Material:
     - Vector1_76EECF9C: 0.31
     - Vector1_7E619FA4: 0
     - Vector1_881E2AB0: 0.0003
-    - Vector1_AF92C8B3: 1.04
+    - Vector1_AF92C8B3: 1.05
     - Vector1_B69C8A1E: 1
     - Vector1_EE69F246: 0
     - Vector1_F093E635: 0.971
@@ -69,7 +69,7 @@ Material:
     - _DoubleSidedNormalMode: 2
     - _DstBlend: 10
     - _EnableBlendModePreserveSpecularLighting: 1
-    - _EnableFogOnTransparent: 1
+    - _EnableFogOnTransparent: 0
     - _OpaqueCullMode: 2
     - _RayTracing: 0
     - _ReceivesSSR: 1
@@ -88,7 +88,7 @@ Material:
     - _StencilWriteMaskDistortionVec: 4
     - _StencilWriteMaskGBuffer: 14
     - _StencilWriteMaskMV: 40
-    - _SupportDecals: 1
+    - _SupportDecals: 0
     - _SurfaceType: 1
     - _TransparentBackfaceEnable: 0
     - _TransparentCullMode: 2
