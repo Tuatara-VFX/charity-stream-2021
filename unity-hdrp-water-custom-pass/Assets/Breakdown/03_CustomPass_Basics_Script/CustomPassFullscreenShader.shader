@@ -39,9 +39,9 @@ Shader "FullScreen/CustomPassFullscreenShader"
         float3 viewDirection = GetWorldSpaceNormalizeViewDir(posInput.positionWS);
         float4 color = float4(0.0, 0.0, 0.0, 0.0);
 
-        color = float4(CustomPassLoadCameraColor(varyings.positionCS.xy, 0), 1);
-        // color.rg = posInput.positionNDC.xy;
-        color.rgb = 1 - color.rgb;
+        // color = float4(CustomPassLoadCameraColor(varyings.positionCS.xy, 0), 1);
+        color.rg = posInput.positionNDC.xy;
+        // color.rgb = 1 - color.rgb;
         
         return float4(color.rgb, 1);
     }
